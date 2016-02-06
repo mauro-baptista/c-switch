@@ -3,6 +3,46 @@ A jQuery plugin to handle radio and checkbox inputs.
 
 **The main idea behind this plugin, is that it will handle the code change, but you need to insert the classes to make it look like what you want.**
 
+---
+### How to user
+
+Call jQuery:
+```html
+    <script src="path/to/jquery.min.js"></script>
+```
+
+Call both files on this repository:
+```html
+    <script src="path/to/c-switch.js"></script>
+    <link rel="stylesheet" type="text/css" href="path/to/c-switch.css">
+```
+
+Create a input radio or a input checkbox as usual, wrapper in a div with the class "c_switch" and with an unique id.
+
+e.g.
+```html
+<div id="activate" class="c_switch">
+    <input type="radio" name="activate" value='yes'>
+    <input type="radio" name="activate" value='no'>
+</div>
+```
+
+Call the c_switch in a script tag.
+
+e.g.
+```html
+<script>
+    jQuery('#activate').c_switch({
+        id: 'activate_switch',
+        style: 'text',
+        text_on: 'Activate',
+        text_off: 'Deactivate',
+        background_width: 'auto',
+    });
+</script>
+```
+
+---
 ## Radio
 
 This code:
