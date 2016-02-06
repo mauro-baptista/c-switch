@@ -64,7 +64,7 @@ Will become this code:
 |background_border|'1px solid '|Barckground border|
 |background_border_color_on|'#CCCCCC'|Background border color when it is on (radio: first option is selected)|
 |background_border_color_off|'#CCCCCC'|Backgroun border color when it is off (radio: second option is selected)|
-|background_width|40|Width of the switch|
+|background_width|40|Width of the switch (If you are using text, will can use 'auto')|
 |background_height|20|Height of the switch||
 |background_margin|2|Margin of the switch||
 |background_class|''|Class that will wrap the background of the switch|
@@ -75,4 +75,58 @@ Will become this code:
 |duration|500|Duration of the transition|
 |animation|'ease'|Transition animation (http://www.w3schools.com/cssref/css3_pr_transition-timing-function.asp)|
 |zoom|1|Size of the switch (1 = 100%)|
+|test|false|If test is true, it will show the default radio/checkbox together with the c-switch|
 
+---
+#How to use
+
+Instead of show the defauld On/Off will show Enabled/Disable
+```javascript
+jQuery('#switch1').c_switch({
+    id: 'switch',
+    style: 'text',
+    text_on: 'Enabled',
+    text_off: 'Disabled',
+    background_width: 'auto',
+});
+```
+-
+This will show the html standard elements for the radio or checkbox. As well, it will show the switch in a round style.
+```javascript
+jQuery('#switch2').c_switch({
+    id: 'switch2',
+    style: 'round',
+    test: true,
+    background_margin: 0
+});
+```
+-
+This is the same as `jQuery('#switch3').c_switch();`
+```javascript
+jQuery('#switch3').c_switch({
+    test: false,
+    style: 'square',
+    id: 'c_element',
+    switch_color_on: '#008000',
+    switch_color_off: '#444444',
+    switch_class: '',
+    switch_class_on: '',
+    switch_class_off: '',
+    background_color_on: 'transparent',
+    background_color_off: 'transparent',
+    background_border: '1px solid ',
+    background_border_color_on: '#CCCCCC',
+    background_border_color_off: '#CCCCCC',
+    background_width: 40,
+    background_height: 20,
+    background_margin: 2,
+    background_class: '',
+    background_class_on: '',
+    background_class_off: '',
+    text_on: 'On',
+    text_off: 'Off',
+    duration: 500,
+    animation: 'ease',
+    zoom: 1
+});
+```
