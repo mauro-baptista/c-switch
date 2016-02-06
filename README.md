@@ -78,7 +78,7 @@ Will become this code:
 |test|false|If test is true, it will show the default radio/checkbox together with the c-switch|
 
 ---
-#How to use
+#Sample
 
 Instead of show the defauld On/Off will show Enabled/Disable
 ```javascript
